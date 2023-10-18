@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Regole generiche */
+body{
+    height: 100vh;
+    width: 100%;
+    line-height: 1;
+    background-color: rgb(216, 238, 232);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    justify-content: left;
+    display: flex;
+    background-image: url('image/spider_vs_venom.jpg');
+    background-repeat: no-repeat;
+    background-position: contain;
+    background-size: cover;
+}
+
+.game-container{
+    height: 60%;
+    margin: 12% 0% 0% 3%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Pannello di gioco */
+h1{
+    color: rgb(97, 0, 0);
+    font-size: 50px;
+    text-shadow: 1px 2px 2px rgb(255, 255, 255);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.score{
+    color: rgb(45, 0, 168);
+    font-size: 45px;
+    display: flex;
+    justify-content: space-between;
+    text-shadow: 1px 2px 2px rgb(255, 255, 255);
+}
+
+/* Tabellone di gioco */
+.game-board{
+    position: relative;
+    border: 2px solid rgb(0, 23, 50);
+    background-image: url('image/spiderman.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 20% 20%;
+    box-shadow: 10px 10px 10px rgb(0, 2, 99);
+}
+
+.grid{
+    height: 480px;
+    width: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.cell{
+    width: 10%;
+    height: 10%;
+    cursor: pointer;
+}
+
+.cell-dark{
+    background-color: rgb(203, 224, 221, 0.2);
+}
+
+.cell:hover,
+.cell-clicked{
+    background-image: url('image/spider.png');
+    background-size: cover;
+}
+
+.cell-bomb{
+    background-image: url('image/venom.png');
+    background-size: 190%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Schermata di fine */
+.end-game-screen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: rgba(241, 117, 78, 0.5);
+}
+
+.end-game-text{
+    font-size: 48px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+button{
+    font-family: 'Darker Grotesque', sans-serif;
+    border: 2px solid rgb(0, 23, 50);
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 4px 20px 8px 20px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(203, 224, 221);
+}
+
+.hidden{
+    display: none;
+}
+
+.win{
+    background-color: rgb(78, 241, 187, 0.6);
+}
+
+@media screen and (max-width: 712px){
+    body{
+        background-size: cover;
+    }
+
+    .game-container{
+        margin: 0% 0% 0% 3%;
+    }
+    
+}
+
+@media screen and (max-width: 530px){
+    body{
+        background-size: cover;
+    }
+
+    .game-container{
+        margin: 10% 0% 0% 3%;
+    }
+
+}
+
+@media screen and (max-width: 400px){
+    body{
+        background-size: cover;
+    }
+    .game-container{
+        width: 95%;
+        height: 90%;
+        margin: 0% 2% 0% 2%;
+    }
+
+    .grid{
+        height: 350px;
+        width: 350px;
+    }
+
+    .cell{
+        width: 33.9px;
+        height: 33.9px;
+    }
+}
